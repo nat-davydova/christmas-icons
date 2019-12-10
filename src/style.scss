@@ -83,7 +83,53 @@ body {
 }
 
 //content styles
+$icon-dimensions: 150px;
+
 .content {
   width: 95%;
   margin: 0 auto 50px;
+}
+
+.content__inner {
+  display: grid;
+  grid-gap: 15px;
+}
+
+.icon {
+  width: $icon-dimensions;
+  height: $icon-dimensions;
+}
+
+//GIFT ICON STYLES
+$gift-body: #06a98c;
+$gift-body-bleak: #00b494;
+
+$bleak-offset: 15px;
+
+.gift-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gift-icon__body {
+  position: relative;
+  width: 80%;
+  height: 60%;
+  
+  background-color: $gift-body;
+  
+  //lighter part
+  &:before {
+    @include position-absolute($top: 0, $left: $bleak-offset);
+    
+    display: block;
+    width: calc(100% - #{$bleak-offset});
+    height: calc(100% - #{$bleak-offset});
+    
+    content: '';
+    
+    background-color: $gift-body-bleak;
+  }
 }

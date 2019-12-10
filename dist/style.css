@@ -53,3 +53,37 @@ body a {
   width: 95%;
   margin: 0 auto 50px;
 }
+
+.content__inner {
+  display: grid;
+  grid-gap: 15px;
+}
+
+.icon {
+  width: 150px;
+  height: 150px;
+}
+
+.gift-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gift-icon__body {
+  position: relative;
+  width: 80%;
+  height: 60%;
+  background-color: #06a98c;
+}
+.gift-icon__body:before {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  display: block;
+  width: calc(100% - 15px);
+  height: calc(100% - 15px);
+  content: '';
+  background-color: #00b494;
+}
