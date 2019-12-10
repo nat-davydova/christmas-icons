@@ -107,6 +107,8 @@ $gift-body: #06a98c;
 $gift-body-bleak: #00b494;
 $gift-body-ribbon: #f0d355;
 
+$gift-ribbon: #dac04e;
+
 $bleak-offset: 10%;
 
 .gift-icon {
@@ -117,11 +119,28 @@ $bleak-offset: 10%;
 }
 
 .gift-icon__top {
+  position: relative;
+  
   width: 100%;
   height: 20%;
   
   border-radius: 5px;
   background-color: $gift-top;
+  
+  //ribbon part
+  &:before {
+    @include position-absolute($top: 0, $left: 50%);
+    
+    display: block;
+    width: 20%;
+    height: 100%;
+    
+    content: '';
+    
+    transform: translateX(-50%);
+    
+    background-color: $gift-ribbon;
+  }
 }
 
 .gift-icon__body {
