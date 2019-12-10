@@ -73,6 +73,9 @@ body a {
 
 .gift-icon__body {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: top;
   width: 80%;
   height: 60%;
   background-color: #06a98c;
@@ -86,6 +89,7 @@ body a {
   height: calc(100% - 15px);
   content: '';
   background-color: #00b494;
+  z-index: 1;
 }
 .gift-icon__body:after {
   position: absolute;
@@ -97,4 +101,14 @@ body a {
   content: '';
   background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.1) 0, transparent 3px);
   background-size: 10px 10px;
+  background-repeat: repeat;
+  z-index: 2;
+}
+
+.gift-icon__body-ribbon {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  background-color: #f0d355;
+  z-index: 5;
 }

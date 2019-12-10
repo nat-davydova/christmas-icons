@@ -103,6 +103,7 @@ $icon-dimensions: 150px;
 //GIFT ICON STYLES
 $gift-body: #06a98c;
 $gift-body-bleak: #00b494;
+$gift-body-ribbon: #f0d355;
 
 $bleak-offset: 15px;
 
@@ -115,6 +116,10 @@ $bleak-offset: 15px;
 
 .gift-icon__body {
   position: relative;
+  
+  display: flex;
+  justify-content: center;
+  align-content: top;
   width: 80%;
   height: 60%;
   
@@ -131,5 +136,35 @@ $bleak-offset: 15px;
     content: '';
     
     background-color: $gift-body-bleak;
+    
+    z-index: 1;
   }
+  
+  //pattern part
+  &:after {
+    @include position-absolute($top: 0, $left: 0);
+    
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    content: '';
+    
+    background-image: radial-gradient(circle at center, rgba(0,0,0,.1) 0, transparent 3px);
+    background-size: 10px 10px;
+    background-repeat: repeat;
+    
+    z-index: 2;
+  }
+}
+
+.gift-icon__body-ribbon {
+  position: relative;
+  
+  width: 20%;
+  height: 100%;
+  
+  background-color: $gift-body-ribbon;
+  
+  z-index: 5;
 }
