@@ -71,22 +71,29 @@ body a {
   justify-content: center;
 }
 
+.gift-icon__top {
+  width: 100%;
+  height: 20%;
+  border-radius: 5px;
+  background-color: #ed5d51;
+}
+
 .gift-icon__body {
   position: relative;
   display: flex;
   justify-content: center;
   align-content: top;
-  width: 80%;
+  width: 85%;
   height: 60%;
   background-color: #06a98c;
 }
 .gift-icon__body:before {
   position: absolute;
   top: 0;
-  left: 15px;
+  left: 10%;
   display: block;
-  width: calc(100% - 15px);
-  height: calc(100% - 15px);
+  width: calc(100% - 10%);
+  height: calc(100% - 10%);
   content: '';
   background-color: #00b494;
   z-index: 1;
