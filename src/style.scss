@@ -333,4 +333,18 @@ $bleak-offset: 15%;
   
   overflow: hidden;
   z-index: 2;
+  
+  //large bleak
+  &:before {
+    @include position-absolute($top: 0, $left: $bleak-offset);
+    
+    display: block;
+    width: calc(100% - #{$bleak-offset});
+    height: 100%;
+    
+    content: '';
+    
+    background-color: $bell;
+    border-radius: 65% 65% 0px 0px;
+  }
 }
