@@ -153,13 +153,13 @@ $bleak-offset: 10%;
   &:before {
     transform: translateX(-30%);
     
-    border-radius: 24px 10px 24px 0;
+    border-radius: 65% 20% 65% 0;
   }
   
   &:after {
     transform: translateX(-70%);
     
-    border-radius: 10px 24px 0px 24px;
+    border-radius: 20% 65% 0px 65%;
   }
 }
 
@@ -285,8 +285,8 @@ $bleak-offset: 15%;
   z-index: 5;
 }
 
-.bell-icon__ribbon-top,
-.bell-icon__ribbon-bottom {
+.bell-icon__ribbon-left,
+.bell-icon__ribbon-right {
   @include position-absolute($top: -10%);
   
   width: 150%;
@@ -297,16 +297,16 @@ $bleak-offset: 15%;
   z-index: 3;
 }
 
-.bell-icon__ribbon-top {
+.bell-icon__ribbon-left {
   transform: translateX(-70%);
   
-  border-radius: 11px 23px 0px 9px;
+  border-radius: 45% 85% 0px 40%;
 }
 
-.bell-icon__ribbon-bottom {
+.bell-icon__ribbon-right {
   transform: translateX(40%);
   
-  border-radius: 23px 11px 9px 0px;
+  border-radius: 85% 45% 40% 0;
 }
 
 .bell-icon__ribbon-middle {
