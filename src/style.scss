@@ -261,6 +261,11 @@ $bleak-offset: 10%;
 
 //BELL ICONS STYLES
 
+$bell: #f0d355;
+$bell-shadow: #dfc553;
+
+$bleak-offset: 15%;
+
 .bell-icon__body {
   display: flex;
   flex-direction: column;
@@ -268,4 +273,30 @@ $bleak-offset: 10%;
   justify-content: center;
   height: 90%;
   width: 100%;
+}
+
+.bell-icon__body-top {
+  position: relative;
+  
+  width: 70%;
+  height: 68%;
+  
+  background-color: $bell-shadow;
+  border-radius: 55% 55% 0px 0px;
+  
+  overflow: hidden;
+  
+  //large bleak
+  &:before {
+    @include position-absolute($top: 0, $left: $bleak-offset);
+    
+    display: block;
+    width: calc(100% - #{$bleak-offset});
+    height: 100%;
+    
+    content: '';
+    
+    background-color: $bell;
+    border-radius: 55% 55% 0px 0px;
+  }
 }

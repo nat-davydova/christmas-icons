@@ -182,3 +182,23 @@ body a {
   height: 90%;
   width: 100%;
 }
+
+.bell-icon__body-top {
+  position: relative;
+  width: 70%;
+  height: 68%;
+  background-color: #dfc553;
+  border-radius: 55% 55% 0px 0px;
+  overflow: hidden;
+}
+.bell-icon__body-top:before {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  display: block;
+  width: calc(100% - 15%);
+  height: 100%;
+  content: '';
+  background-color: #f0d355;
+  border-radius: 55% 55% 0px 0px;
+}
