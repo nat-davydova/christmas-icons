@@ -263,6 +263,7 @@ $bleak-offset: 10%;
 
 $bell: #f0d355;
 $bell-shadow: #dfc553;
+$bell-light: #fff;
 
 $bleak-offset: 15%;
 
@@ -278,6 +279,7 @@ $bleak-offset: 15%;
 .bell-icon__body-top {
   position: relative;
   
+  flex-shrink: 0;
   width: 70%;
   height: 68%;
   
@@ -285,6 +287,8 @@ $bleak-offset: 15%;
   border-radius: 55% 55% 0px 0px;
   
   overflow: hidden;
+  
+  z-index: 4;
   
   //large bleak
   &:before {
@@ -299,4 +303,34 @@ $bleak-offset: 15%;
     background-color: $bell;
     border-radius: 55% 55% 0px 0px;
   }
+  
+  &:after {
+    @include position-absolute($top: $bleak-offset, $right: $bleak-offset);
+    
+    display: block;
+    width: $bleak-offset/2;
+    height: $bleak-offset * 3;
+    
+    content: '';
+    
+    transform: translate(-37%, -19%) rotate(-46deg);
+    
+    background-color: $bell-light;
+    border-radius: $bleak-offset * 4;
+  }
+}
+
+.bell-icon__body-middle {
+  position: relative;
+  top: -5%;
+  
+  flex-shrink: 0;
+  width: 100%;
+  height: 25%;
+  
+  background-color: $bell-shadow;
+  border-radius: 65% 65% 0px 0px;
+  
+  overflow: hidden;
+  z-index: 2;
 }
