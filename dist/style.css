@@ -61,7 +61,8 @@ body a {
 
 .content__inner {
   display: grid;
-  grid-gap: 15px;
+  grid-gap: 25px;
+  grid-template-columns: repeat(5, 150px);
 }
 
 .icon {
@@ -171,4 +172,13 @@ body a {
   height: 100%;
   background-color: #f0d355;
   z-index: 5;
+}
+
+.bell-icon__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  width: 100%;
 }
