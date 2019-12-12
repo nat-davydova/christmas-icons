@@ -521,3 +521,13 @@ body a {
 .santa-icon__face-part:nth-child(2):after {
   transform: translate(-30%, -60%);
 }
+
+.calendar-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #db5a4f;
+  border-radius: 30%;
+  overflow: hidden;
+}

@@ -711,3 +711,19 @@ $bleak-offset-lg: 25%;
     }
   }
 }
+
+//CALENDAR ICON STYLES
+$calendar: #db5a4f;
+
+.calendar-icon {
+  position: relative;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: $calendar;
+  border-radius: 30%;
+  
+  overflow: hidden;
+}
