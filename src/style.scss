@@ -632,6 +632,24 @@ $bleak-offset-lg: 25%;
   height: 45%;
   
   z-index: 6;
+  
+  //nose
+  &:after {
+    @include position-absolute($bottom: 0, $left: 50%);
+  
+    display: block;
+    width: 25%;
+    height: 50%;
+    
+    content: '';
+  
+    transform: translate(-50%, 35%);
+    
+    background-color: $santa-accent-bright;
+    border-radius: 50%;
+    
+    z-index: 2;
+  }
 }
 
 .santa-icon__face-part {
