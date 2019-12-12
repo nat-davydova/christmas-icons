@@ -483,6 +483,20 @@ body a {
   background-color: #ffe2c5;
   border-radius: 100% 0% 50% 50% / 0% 0% 100% 100%;
   overflow: hidden;
+  z-index: 1;
+}
+.santa-icon__face-part:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 25%;
+  height: 45%;
+  content: '';
+  transform: translate(-70%, -60%);
+  background-color: #636052;
+  border-radius: 50%;
+  z-index: 2;
 }
 .santa-icon__face-part:nth-child(2) {
   left: -40%;
@@ -490,4 +504,7 @@ body a {
 .santa-icon__face-part:nth-child(2):before {
   left: -10%;
   width: 110%;
+}
+.santa-icon__face-part:nth-child(2):after {
+  transform: translate(-30%, -60%);
 }
