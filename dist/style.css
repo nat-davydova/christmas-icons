@@ -335,6 +335,7 @@ body a {
   background-color: #e0e1e1;
   border-radius: 50%;
   overflow: hidden;
+  z-index: 3;
 }
 .santa-icon__hat-top:before {
   position: absolute;
@@ -346,4 +347,27 @@ body a {
   content: '';
   background-color: #f1f2f2;
   border-radius: 50%;
+}
+
+.santa-icon__hat-middle {
+  position: relative;
+  top: 5px;
+  width: 60%;
+  height: 70%;
+  background-color: #dc5a50;
+  border-radius: 50% 0;
+  transform: rotate(128deg);
+  overflow: hidden;
+  z-index: 1;
+}
+.santa-icon__hat-middle:before {
+  position: absolute;
+  top: -15%;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: #e06e65;
+  border-radius: 50% 0;
 }

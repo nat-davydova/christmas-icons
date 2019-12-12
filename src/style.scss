@@ -439,6 +439,7 @@ $bleak-offset: 15%;
 //SANTA ICON STYLES
 $santa-shadow: #e0e1e1;
 $santa-light: #f1f2f2;
+$santa-accent: #dc5a50;
 
 $bleak-offset-lg: 25%;
 
@@ -472,6 +473,7 @@ $bleak-offset-lg: 25%;
   border-radius: 50%;
   
   overflow: hidden;
+  z-index: 3;
   
   //bleak
   &:before {
@@ -485,5 +487,34 @@ $bleak-offset-lg: 25%;
     
     background-color: $santa-light;
     border-radius: 50%;
+  }
+}
+
+.santa-icon__hat-middle {
+  position: relative;
+  top: 5px;
+  
+  width: 60%;
+  height: 70%;
+  
+  background-color: $santa-accent;
+  border-radius: 50% 0;
+  transform: rotate(128deg);
+  
+  overflow: hidden;
+  z-index: 1;
+  
+  //bleak
+  &:before {
+     @include position-absolute($top: - $bleak-offset, $left: 0);
+    
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    content: '';
+    
+    background-color: lighten($santa-accent, 5%);
+    border-radius: 50% 0;
   }
 }
