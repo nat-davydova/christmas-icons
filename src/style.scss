@@ -558,8 +558,6 @@ $bleak-offset-lg: 25%;
   top: -2px;
   
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
   height: 50%;
   width: 67%;
@@ -622,5 +620,51 @@ $bleak-offset-lg: 25%;
     
     background-color: $santa-body-light;
     border-radius: inherit;
+  }
+}
+
+.santa-icon__head-face {
+  position: relative;
+  
+  display: flex;
+  width: 75%;
+  height: 45%;
+  
+  z-index: 6;
+}
+
+.santa-icon__face-part {
+  position: relative;
+  
+  flex-shrink: 0;
+  width: 70%;
+  height: 100%;
+  
+  background-color: $santa-body;
+  border-radius: 100% 0% 50% 50% / 0% 0% 100% 100%;
+  
+  &:before {
+    @include position-absolute($bottom: $bleak-offset / 2, $left: 0);
+  
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    content: '';
+  
+    background-color: $santa-body-light;
+    border-radius: 100% 0% 50% 50% / 0% 0% 100% 100%;
+  
+    overflow: hidden;
+  }
+  
+  &:nth-child(2) {
+    left: - 40%;
+    
+    &:before {
+      left: -10%;
+      
+      width: 110%;
+    }
   }
 }
