@@ -183,6 +183,7 @@ body a {
 
 .bell-icon__ribbon {
   position: relative;
+  top: 2%;
   height: 15%;
   width: 15%;
   margin-bottom: -3%;
@@ -221,7 +222,7 @@ body a {
 
 .bell-icon__body {
   position: relative;
-  top: 3%;
+  top: 6%;
   display: flex;
   flex-direction: column;
   align-items: center;
