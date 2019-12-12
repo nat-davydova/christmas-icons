@@ -324,7 +324,7 @@ body a {
   align-items: center;
   justify-content: center;
   height: 50%;
-  width: 65%;
+  width: 78%;
   z-index: 5;
 }
 
@@ -353,7 +353,7 @@ body a {
 .santa-icon__hat-middle {
   position: relative;
   top: -2px;
-  width: 70%;
+  width: 75%;
   height: 60%;
   flex-shrink: 0;
   background-color: #dc5a50;
@@ -369,7 +369,7 @@ body a {
   width: 100%;
   height: 100%;
   content: '';
-  background-color: #e06e65;
+  background-color: #ed5d51;
   border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
 }
 
@@ -394,4 +394,39 @@ body a {
   content: '';
   background-color: #f1f2f2;
   border-radius: 50px;
+}
+
+.santa-icon__face {
+  position: relative;
+  top: -2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 67%;
+  z-index: 3;
+}
+
+.santa-icon__face-beard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #e0e1e1;
+  border-radius: 100% 0% 50% 50% / 0% 0% 100% 100%;
+  overflow: hidden;
+}
+.santa-icon__face-beard:before {
+  position: absolute;
+  left: 0;
+  bottom: 15%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: #f1f2f2;
+  border-radius: 100% 0% 50% 50% / 0% 0% 100% 100%;
 }

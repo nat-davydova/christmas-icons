@@ -440,6 +440,7 @@ $bleak-offset: 15%;
 $santa-shadow: #e0e1e1;
 $santa-light: #f1f2f2;
 $santa-accent: #dc5a50;
+$santa-accent-bright: #ed5d51;
 
 $bleak-offset-lg: 25%;
 
@@ -458,7 +459,7 @@ $bleak-offset-lg: 25%;
   align-items: center;
   justify-content: center;
   height: 50%;
-  width: 65%;
+  width: 78%;
   
   z-index: 5;
 }
@@ -495,7 +496,7 @@ $bleak-offset-lg: 25%;
   position: relative;
   top: -2px;
   
-  width: 70%;
+  width: 75%;
   height: 60%;
   flex-shrink: 0;
   
@@ -515,7 +516,7 @@ $bleak-offset-lg: 25%;
     
     content: '';
     
-    background-color: lighten($santa-accent, 5%);
+    background-color: $santa-accent-bright;
     border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
   }
 }
@@ -546,5 +547,46 @@ $bleak-offset-lg: 25%;
     
     background-color: $santa-light;
     border-radius: 50px;
+  }
+}
+
+.santa-icon__face {
+  position: relative;
+  top: -2px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 67%;
+  
+  z-index: 3;
+}
+
+.santa-icon__face-beard {
+  @include position-absolute($top: 0, $left: 0);
+  
+  display: block;
+  width: 100%;
+  height: 100%;
+  
+  background-color: $santa-shadow;
+  border-radius: 100% 0% 50% 50% / 0% 0% 100% 100%;
+  
+  overflow: hidden;
+  
+  //bleak
+  &:before {
+     @include position-absolute($bottom: $bleak-offset, $left: 0);
+    
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    content: '';
+    
+    background-color: $santa-light;
+    border-radius: 100% 0% 50% 50% / 0% 0% 100% 100%;
   }
 }
