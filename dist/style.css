@@ -531,3 +531,16 @@ body a {
   border-radius: 30%;
   overflow: hidden;
 }
+.calendar-icon:before {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: #ed5d51;
+  border-radius: inherit;
+  overflow: hidden;
+  z-index: 1;
+}
