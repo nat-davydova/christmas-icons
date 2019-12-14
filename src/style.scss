@@ -1066,6 +1066,7 @@ $bleak-offset-lg: 20%;
 //SNOWMAN ICON STYLES
 $snowman-body: #dfe0e0;
 $snowman-body-bleak: #f1f2f2;
+$snowman-dark: #636052;
 
 $bleak-offset: 10%;
 
@@ -1113,5 +1114,23 @@ $bleak-offset: 10%;
   
     overflow: hidden;
     z-index: 1;
+  }
+  
+  //buttons
+  &:after {
+    position: relative;
+    top: 10%;
+  
+    display: inline-flex;
+    width: 20%;
+    height: 50%;
+    
+    content: '';
+  
+    background-image: radial-gradient(circle at center, $snowman-dark 0, $snowman-dark 45%, transparent 45%);
+    background-size: 100% 50%;
+    background-repeat: repeat-y;
+  
+    z-index: 5;
   }
 }

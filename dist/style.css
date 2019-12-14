@@ -807,3 +807,15 @@ body a {
   overflow: hidden;
   z-index: 1;
 }
+.snowman-icon__body:after {
+  position: relative;
+  top: 10%;
+  display: inline-flex;
+  width: 20%;
+  height: 50%;
+  content: '';
+  background-image: radial-gradient(circle at center, #636052 0, #636052 45%, transparent 45%);
+  background-size: 100% 50%;
+  background-repeat: repeat-y;
+  z-index: 5;
+}
