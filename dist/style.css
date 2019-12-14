@@ -558,6 +558,9 @@ body a {
 
 .calendar-icon__body {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 80%;
   height: 55%;
   margin-top: 10%;
@@ -578,4 +581,14 @@ body a {
   border-radius: inherit;
   overflow: hidden;
   z-index: 1;
+}
+.calendar-icon__body:after {
+  position: relative;
+  display: inline-flex;
+  font-family: 'Arial';
+  font-size: 67.5px;
+  font-weight: 700;
+  color: #00b494;
+  content: '25';
+  z-index: 3;
 }

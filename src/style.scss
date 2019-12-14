@@ -717,6 +717,7 @@ $calendar: #db5a4f;
 $calendar-bleak: #ed5d51;
 $calendar-light-shadow: #ececec;
 $calendar-light: #fff;
+$calendar-accent: #00b494;
 
 $bleak-offset: 10%;
 
@@ -767,6 +768,9 @@ $bleak-offset: 10%;
 .calendar-icon__body {
   position: relative;
   
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 80%;
   height: 55%;
   margin-top: 10%;
@@ -792,5 +796,23 @@ $bleak-offset: 10%;
   
     overflow: hidden;
     z-index: 1;
+  }
+  
+  //number
+  &:after {
+    position: relative;
+  
+    display: inline-flex;
+    
+    font: {
+      family: 'Arial';
+      size: $icon-dimensions * .45;
+      weight: 700;
+    }
+    color: $calendar-accent;
+    
+    content: '25';
+  
+    z-index: 3;
   }
 }
