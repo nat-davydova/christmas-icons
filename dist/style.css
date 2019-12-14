@@ -769,3 +769,13 @@ body a {
   overflow: hidden;
   z-index: 1;
 }
+
+.snowman-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+}

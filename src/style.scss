@@ -835,7 +835,7 @@ $bleak-offset: 10%;
 $bleak-offset-lg: 20%;
 
 .candle-icon {
-   position: relative;
+  position: relative;
   
   display: flex;
   flex-direction: column;
@@ -1061,4 +1061,16 @@ $bleak-offset-lg: 20%;
     overflow: hidden;
     z-index: 1;
   }
+}
+
+//SNOWMAN ICON STYLES
+.snowman-icon {
+  position: relative;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: $icon-dimensions;
+  height: $icon-dimensions;
 }
