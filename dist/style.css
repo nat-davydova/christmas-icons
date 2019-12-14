@@ -605,3 +605,50 @@ body a {
   width: 150px;
   height: 150px;
 }
+
+.candle-icon__sledge {
+  position: relative;
+  width: 100%;
+  height: 18%;
+  background-color: #06a98c;
+  border-radius: 0 0 50% 50% / 0 0 80% 80%;
+}
+.candle-icon__sledge:before {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  display: block;
+  width: calc(100% - 10%);
+  height: 100%;
+  content: '';
+  background-color: #00b494;
+  border-radius: inherit;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.candle-icon__sledge-hold {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  width: 35%;
+  height: 100%;
+  background-color: #00b494;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  overflow: hidden;
+  z-index: 1;
+}
+.candle-icon__sledge-hold:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 65%;
+  height: 95%;
+  content: '';
+  transform: translate(-50%);
+  background-color: #fff;
+  border-radius: 50% 50% 0 0;
+  overflow: hidden;
+  z-index: 1;
+}
