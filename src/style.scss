@@ -1067,6 +1067,7 @@ $bleak-offset-lg: 20%;
 $snowman-body: #dfe0e0;
 $snowman-body-bleak: #f1f2f2;
 $snowman-dark: #636052;
+$snowman-accent: #ef6b3a;
 
 $bleak-offset: 10%;
 
@@ -1083,9 +1084,84 @@ $bleak-offset: 10%;
   overflow: hidden;
 }
 
+.snowman-icon__head {
+  position: relative;
+  top: 15%;
+  
+  flex-shrink: 0;
+  width: 55%;
+  height: 55%;
+  
+  background-color: $snowman-body;
+  border-radius: 50%;
+  
+  overflow: hidden;
+  z-index: 1;
+  
+  //bleak
+  &:before {
+    @include position-absolute($top: 0, $left: $bleak-offset);
+  
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    content: '';
+  
+    background-color: $snowman-body-bleak;
+    border-radius: inherit;
+  
+    overflow: hidden;
+    z-index: 1;
+  }
+}
+
+.snowman-icon__face {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  
+  //eyes
+  &:before {
+    position: relative;
+    top: -10%;
+  
+    display: inline-flex;
+    width: 60%;
+    height: 20%;
+    
+    content: '';
+  
+    background-image: radial-gradient(circle at center, $snowman-dark 0, $snowman-dark 35%, transparent 35%);
+    background-size: 50% 100%;
+    background-repeat: repeat-x;
+  
+    z-index: 5;
+  }
+  
+  //nose
+  &:after {
+    position: relative;
+    top: -10%;
+  
+    display: inline-flex;
+    width: 15%;
+    height: 15%;
+    
+    content: '';
+  
+    background-color: $snowman-accent;
+    border-radius: 50%;
+  
+    z-index: 5;
+  }
+}
+
 .snowman-icon__body {
   position: relative;
-  top: 20%;
   
   display: flex;
   flex-direction: column;
@@ -1098,6 +1174,7 @@ $bleak-offset: 10%;
   border-radius: 50%;
   
   overflow: hidden;
+  z-index: 3;
   
   //bleak
   &:before {
