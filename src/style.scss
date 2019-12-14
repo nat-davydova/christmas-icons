@@ -837,6 +837,19 @@ $bleak-offset: 10%;
   height: $icon-dimensions;
 }
 
+.candle-icon__candle {
+  position: relative;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 82%;
+  
+  z-index: 3;
+}
+
 .candle-icon__sledge {
   position: relative;
   
@@ -845,6 +858,8 @@ $bleak-offset: 10%;
   
   background-color: $candle-sledge;
   border-radius: 0 0 50% 50% / 0 0 80% 80%;
+  
+  z-index: 5;
   
   //bleak
   &:before {
@@ -881,8 +896,8 @@ $bleak-offset: 10%;
     @include position-absolute($top: 50%, $left: 50%);
   
     display: block;
-    width: 65%;
-    height: 95%;
+    width: 60%;
+    height: 100%;
     
     content: '';
   
