@@ -1064,6 +1064,11 @@ $bleak-offset-lg: 20%;
 }
 
 //SNOWMAN ICON STYLES
+$snowman-body: #dfe0e0;
+$snowman-body-bleak: #f1f2f2;
+
+$bleak-offset: 10%;
+
 .snowman-icon {
   position: relative;
   
@@ -1073,4 +1078,40 @@ $bleak-offset-lg: 20%;
   align-items: center;
   width: $icon-dimensions;
   height: $icon-dimensions;
+  
+  overflow: hidden;
+}
+
+.snowman-icon__body {
+  position: relative;
+  top: 20%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 75%;
+  height: 75%;
+  
+  background-color: $snowman-body;
+  border-radius: 50%;
+  
+  overflow: hidden;
+  
+  //bleak
+  &:before {
+    @include position-absolute($top: 0, $left: $bleak-offset);
+  
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    content: '';
+  
+    background-color: $snowman-body-bleak;
+    border-radius: inherit;
+  
+    overflow: hidden;
+    z-index: 1;
+  }
 }
