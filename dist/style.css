@@ -617,13 +617,52 @@ body a {
   z-index: 3;
 }
 
+.candle-icon__candle-flame {
+  position: relative;
+  top: 3%;
+  width: 50%;
+  height: 33%;
+  flex-shrink: 0;
+  transform: rotate(45deg);
+  background-color: #dec453;
+  border-radius: 0% 100% 57% 43% / 0% 45% 55% 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.candle-icon__candle-flame:before {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: #f0d355;
+  border-radius: inherit;
+  z-index: 1;
+}
+.candle-icon__candle-flame:after {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  display: block;
+  width: 40%;
+  height: 40%;
+  content: '';
+  background-color: #ffeda1;
+  border-radius: 50%;
+  z-index: 2;
+}
+
 .candle-icon__candle-body {
   position: relative;
   width: 100%;
   height: 70%;
-  border-radius: 10%;
+  flex-shrink: 0;
+  border-radius: 10% 10% 0 0;
   background-color: #db5a4f;
   overflow: hidden;
+  z-index: 3;
 }
 .candle-icon__candle-body:before {
   position: absolute;
