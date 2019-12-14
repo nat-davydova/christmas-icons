@@ -1211,3 +1211,15 @@ $bleak-offset: 10%;
     z-index: 5;
   }
 }
+
+//FACE ICON STYLES
+.face-icon {
+  position: relative;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: $icon-dimensions;
+  height: $icon-dimensions;
+}
