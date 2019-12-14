@@ -714,11 +714,15 @@ $bleak-offset-lg: 25%;
 
 //CALENDAR ICON STYLES
 $calendar: #db5a4f;
+$calendar-bleak: #ed5d51;
+
+$bleak-offset: 10%;
 
 .calendar-icon {
   position: relative;
   
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   
@@ -726,4 +730,34 @@ $calendar: #db5a4f;
   border-radius: 30%;
   
   overflow: hidden;
+  
+  //bleak
+  &:before {
+    @include position-absolute($top: 0, $left: $bleak-offset);
+  
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    content: '';
+  
+    background-color: $calendar-bleak;
+    border-radius: inherit;
+  
+    overflow: hidden;
+    z-index: 1;
+  }
+}
+
+.calendar-icon__holes {
+  position: relative;
+  
+  width: 100%;
+  height: 15%;
+  
+  background-image: radial-gradient(circle at center, rgba(255,255,255,1) 0, rgba(255,255,255,1) 25%, transparent 26%);
+  background-size: 50% 100%;
+  background-repeat: repeat-x;
+  
+  z-index: 5;
 }
