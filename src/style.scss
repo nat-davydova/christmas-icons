@@ -825,8 +825,11 @@ $candle-sledge: #06a98c;
 $candle-sledge-bleak: #00b494;
 $candle-body: #db5a4f;
 $candle-body-bleak: #ed5d51;
+$candle-wax-light: #d84f48;
+$candle-wax-dark: #c94e47;
 
 $bleak-offset: 10%;
+$bleak-offset-lg: 20%;
 
 .candle-icon {
    position: relative;
@@ -865,7 +868,7 @@ $bleak-offset: 10%;
   
   //bleak 
   &:before {
-    @include position-absolute($top: 0, $left: $bleak-offset);
+    @include position-absolute($top: 0, $left: $bleak-offset-lg);
   
     display: block;
     width: 100%;
@@ -877,6 +880,71 @@ $bleak-offset: 10%;
     border-radius: inherit;
     
     z-index: 1;
+  }
+}
+
+.candle-icon__candle-wax {
+  position: relative;
+  
+  display: flex;
+  width: 100%;
+  height: 45%;
+  
+  z-index: 5;
+  
+  //wax parts
+  &:after,
+  &:before,
+  &-inner {
+    position: relative;
+    
+    display: inline-flex;
+    flex-shrink: 0;
+    
+    content: '';
+    
+    background-color: $candle-wax-light;
+    border-radius: 0 0 50% 50%;
+  }
+  
+  &:before {
+    left: -5%;
+    
+    width: 35%;
+    height: 60%;
+  }
+  
+  &:after {
+    left: -10%;
+    
+    width: 40%;
+    height: 80%;
+  }
+  
+  &-inner {
+    width: 40%;
+    height: 100%;
+    
+    order: -1;
+    
+    background-color: $candle-wax-dark;
+    
+    overflow: hidden;
+    
+    &:before {
+    @include position-absolute($top: 0, $left: $bleak-offset-lg * 2);
+  
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    content: '';
+  
+    background-color: $candle-wax-light;
+    border-radius: inherit;
+    
+    z-index: 1;
+  }
   }
 }
 
