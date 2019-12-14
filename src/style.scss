@@ -823,6 +823,8 @@ $bleak-offset: 10%;
 //CANDLE ICONS STYLES
 $candle-sledge: #06a98c;
 $candle-sledge-bleak: #00b494;
+$candle-body: #db5a4f;
+$candle-body-bleak: #ed5d51;
 
 $bleak-offset: 10%;
 
@@ -844,10 +846,38 @@ $bleak-offset: 10%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 45%;
   height: 82%;
   
   z-index: 3;
+}
+
+.candle-icon__candle-body {
+  position: relative;
+  
+  width: 100%;
+  height: 70%;
+  
+  border-radius: 10%;
+  background-color: $candle-body;
+  
+  overflow: hidden;
+  
+  //bleak 
+  &:before {
+    @include position-absolute($top: 0, $left: $bleak-offset);
+  
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    content: '';
+  
+    background-color: $candle-body-bleak;
+    border-radius: inherit;
+    
+    z-index: 1;
+  }
 }
 
 .candle-icon__sledge {

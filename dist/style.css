@@ -612,9 +612,30 @@ body a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 45%;
   height: 82%;
   z-index: 3;
+}
+
+.candle-icon__candle-body {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  border-radius: 10%;
+  background-color: #db5a4f;
+  overflow: hidden;
+}
+.candle-icon__candle-body:before {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: #ed5d51;
+  border-radius: inherit;
+  z-index: 1;
 }
 
 .candle-icon__sledge {
