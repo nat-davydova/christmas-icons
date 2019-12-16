@@ -1213,6 +1213,13 @@ $bleak-offset: 10%;
 }
 
 //FACE ICON STYLES
+$hat: #079076;
+$hat-bleak: #00997c;
+$hat-pattern-light: #fff;
+$hat-pattern-dark: #008269;
+
+$bleak-offset: 10%;
+
 .face-icon {
   position: relative;
   
@@ -1232,6 +1239,76 @@ $bleak-offset: 10%;
   align-items: center;
   width: 85%;
   height: 52%;
+  
+  z-index: 5;
+}
+
+.face-icon__hat-top {
+  position: relative;
+  
+  width: 75%;
+  height: 70%;
+  
+  background-color: $hat;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  
+  overflow: hidden;
+  
+  //bleak
+  &:before {
+    @include position-absolute($top: 0, $left: $bleak-offset);
+  
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    content: '';
+  
+    background-color: $hat-bleak;
+    border-radius: inherit;
+  
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  //patterns
+  &:after {
+    @include position-absolute($top: 0, $left: 0);
+  
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    content: '';
+  
+    background-image: 
+      radial-gradient(circle at center, $hat-pattern-light 0, $hat-pattern-light 25%, transparent 25%),
+      radial-gradient(circle at center, $hat-pattern-dark 0, $hat-pattern-dark 35%, transparent 35%);
+    background-position: 0 70%, 0 75%;
+    background-size: 15% 10%, 30% 25%;
+    background-repeat: repeat-x; 
+  
+    overflow: hidden;
+    z-index: 3;
+  }
+}
+
+.face-icon__hat-top-inner {
+  @include position-absolute($top: 20%, $left: 0);
+  
+   width: 100%;
+   height: 25%;
+  
+  background-image: 
+      linear-gradient(45deg, $hat-bleak 25%, transparent 25%),
+      linear-gradient(315deg, $hat-bleak 25%, transparent 25%),
+      linear-gradient(135deg, $hat-bleak 25%, transparent 25%),
+      linear-gradient(225deg, $hat-bleak 25%, transparent 25%);
+  
+  background-position: 0% 0%, 0% 0%, -50% 0%, -50% 0%;
+  background-size: 20% 100%;
+  background-repeat: repeat-x; 
+  background-color: $hat-pattern-light;
   
   z-index: 5;
 }
