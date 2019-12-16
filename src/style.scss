@@ -1223,3 +1223,15 @@ $bleak-offset: 10%;
   width: $icon-dimensions;
   height: $icon-dimensions;
 }
+
+.face-icon__hat {
+  position: relative;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  height: 52%;
+  
+  z-index: 5;
+}

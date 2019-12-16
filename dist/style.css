@@ -886,3 +886,13 @@ body a {
   width: 150px;
   height: 150px;
 }
+
+.face-icon__hat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  height: 52%;
+  z-index: 5;
+}
