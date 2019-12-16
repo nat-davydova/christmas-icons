@@ -1477,6 +1477,9 @@ $bleak-offset: 10%;
 }
 
 //CAKE ICON STYLES
+$plate: #07a88c;
+$plate-bleak: #00b494;
+
 $bleak-offset: 10%;
 
 .cake-icon {
@@ -1487,4 +1490,31 @@ $bleak-offset: 10%;
   align-items: center;
   width: $icon-dimensions;
   height: $icon-dimensions;
+}
+
+.cake-icon__plate {
+  position: relative;
+  
+  height: 10%;
+  width: 100%;
+  
+  border-radius: 100px;
+  background-color: $plate;
+  
+   //bleak
+  &:before {
+    @include position-absolute($top: 0, $left: $bleak-offset);
+  
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    content: '';
+  
+    background-color: $plate-bleak;
+    border-radius: inherit;
+  
+    overflow: hidden;
+    z-index: 1;
+  }
 }

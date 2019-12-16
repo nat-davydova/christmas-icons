@@ -1077,3 +1077,24 @@ body a {
   width: 150px;
   height: 150px;
 }
+
+.cake-icon__plate {
+  position: relative;
+  height: 10%;
+  width: 100%;
+  border-radius: 100px;
+  background-color: #07a88c;
+}
+.cake-icon__plate:before {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: #00b494;
+  border-radius: inherit;
+  overflow: hidden;
+  z-index: 1;
+}
