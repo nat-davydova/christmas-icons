@@ -1001,3 +1001,14 @@ body a {
   overflow: hidden;
   z-index: 1;
 }
+
+.face-icon__eyes {
+  position: relative;
+  width: 65%;
+  height: 35%;
+  background-image: radial-gradient(circle at center, #636052 30%, transparent 30%);
+  background-position: 0 0;
+  background-size: 50% 100%;
+  background-repeat: repeat-x;
+  z-index: 3;
+}
