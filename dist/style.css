@@ -881,7 +881,6 @@ body a {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 150px;
   height: 150px;
@@ -899,11 +898,13 @@ body a {
 
 .face-icon__hat-top {
   position: relative;
-  width: 75%;
-  height: 70%;
+  flex-shrink: 0;
+  width: 85%;
+  height: 75%;
   background-color: #079076;
   border-radius: 50% 50% 0 0 / 100% 100% 0 0;
   overflow: hidden;
+  z-index: 2;
 }
 .face-icon__hat-top:before {
   position: absolute;
@@ -946,4 +947,28 @@ body a {
   background-repeat: repeat-x;
   background-color: #fff;
   z-index: 5;
+}
+
+.face-icon__hat-bottom {
+  position: relative;
+  top: -5%;
+  flex-shrink: 0;
+  width: 100%;
+  height: 30%;
+  background-color: #07a88c;
+  border-radius: 25% 25% 50% 50% / 50% 50% 50% 50%;
+  overflow: hidden;
+}
+.face-icon__hat-bottom:before {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: #00b494;
+  border-radius: inherit;
+  overflow: hidden;
+  z-index: 1;
 }

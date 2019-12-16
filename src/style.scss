@@ -1217,6 +1217,8 @@ $hat: #079076;
 $hat-bleak: #00997c;
 $hat-pattern-light: #fff;
 $hat-pattern-dark: #008269;
+$hat-bottom: #07a88c;
+$hat-bottom-bleak: #00b494;
 
 $bleak-offset: 10%;
 
@@ -1225,7 +1227,6 @@ $bleak-offset: 10%;
   
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: $icon-dimensions;
   height: $icon-dimensions;
@@ -1246,13 +1247,15 @@ $bleak-offset: 10%;
 .face-icon__hat-top {
   position: relative;
   
-  width: 75%;
-  height: 70%;
+  flex-shrink: 0;
+  width: 85%;
+  height: 75%;
   
   background-color: $hat;
   border-radius: 50% 50% 0 0 / 100% 100% 0 0;
   
   overflow: hidden;
+  z-index: 2;
   
   //bleak
   &:before {
@@ -1311,4 +1314,35 @@ $bleak-offset: 10%;
   background-color: $hat-pattern-light;
   
   z-index: 5;
+}
+
+.face-icon__hat-bottom {
+  position: relative;
+  top: -5%;
+  
+  flex-shrink: 0;
+  width: 100%;
+  height: 30%;
+  
+  background-color: $hat-bottom;
+  border-radius: 25% 25% 50% 50% / 50% 50% 50% 50%;
+  
+  overflow: hidden;
+  
+  //bleak
+  &:before {
+    @include position-absolute($top: 0, $left: $bleak-offset);
+  
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    content: '';
+  
+    background-color: $hat-bottom-bleak;
+    border-radius: inherit;
+  
+    overflow: hidden;
+    z-index: 1;
+  }
 }
