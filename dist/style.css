@@ -1068,3 +1068,12 @@ body a {
 .face-icon__ears:after {
   right: 0;
 }
+
+.cake-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+}

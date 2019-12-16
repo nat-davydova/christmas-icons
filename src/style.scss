@@ -1475,3 +1475,16 @@ $bleak-offset: 10%;
     right: 0;
   }
 }
+
+//CAKE ICON STYLES
+$bleak-offset: 10%;
+
+.cake-icon {
+  position: relative;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: $icon-dimensions;
+  height: $icon-dimensions;
+}
