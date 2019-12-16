@@ -1224,6 +1224,7 @@ $face-bleak: #ffe2c5;
 $eyes: #636052;
 $cheeks: #ffc197;
 $smile: #636052;
+$ears: #ed5d51;
 
 $bleak-offset: 10%;
 
@@ -1369,6 +1370,8 @@ $bleak-offset: 10%;
   background-color: $face;
   border-radius: 0 0 50% 50% / 0 0 100% 100%;
   
+  z-index: 2;
+  
   //bleak
   &:before {
     @include position-absolute($top: 0, $left: $bleak-offset);
@@ -1437,4 +1440,38 @@ $bleak-offset: 10%;
   border-radius: 50%;
   
   z-index: 3;
+}
+
+.face-icon__ears {
+  @include position-absolute($top: 52%, $left: 50%);
+  
+  height: 25%;
+  width: 85%;
+  
+  transform: translateX(-50%);
+  
+  z-index: 2;
+  
+  //ears parts
+  &:before,
+  &:after {
+    @include position-absolute($top: 0);
+    
+    display: block;
+    width: 15%;
+    height: 100%;
+    
+    content: '';
+    
+    background-color: $ears;
+    border-radius: 140px;
+  }
+  
+  &:before {
+    left: 0;
+  }
+  
+  &:after {
+    right: 0;
+  }
 }

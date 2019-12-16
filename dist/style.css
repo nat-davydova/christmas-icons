@@ -987,6 +987,7 @@ body a {
   height: 45%;
   background-color: #ecd1b8;
   border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  z-index: 2;
 }
 .face-icon__face:before {
   position: absolute;
@@ -1040,4 +1041,30 @@ body a {
   border-left-color: #636052;
   border-radius: 50%;
   z-index: 3;
+}
+
+.face-icon__ears {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  height: 25%;
+  width: 85%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.face-icon__ears:before, .face-icon__ears:after {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 15%;
+  height: 100%;
+  content: '';
+  background-color: #ed5d51;
+  border-radius: 140px;
+}
+.face-icon__ears:before {
+  left: 0;
+}
+.face-icon__ears:after {
+  right: 0;
 }
