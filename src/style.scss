@@ -1222,6 +1222,7 @@ $hat-bottom-bleak: #00b494;
 $face: #ecd1b8;
 $face-bleak: #ffe2c5;
 $eyes: #636052;
+$cheeks: #ffc197;
 
 $bleak-offset: 10%;
 
@@ -1388,11 +1389,28 @@ $bleak-offset: 10%;
 .face-icon__eyes {
   position: relative;
   
+  flex-shrink: 0;
   width: 65%;
   height: 35%;
   
   background-image: 
       radial-gradient(circle at center, $eyes 30%, transparent 30%);
+    background-position: 0 0;
+    background-size: 50% 100%;
+    background-repeat: repeat-x;
+  
+  z-index: 3;
+}
+
+.face-icon__cheeks {
+  position: relative;
+  
+  flex-shrink: 0;
+  width: 85%;
+  height: 40%;
+  
+  background-image: 
+      radial-gradient(circle at center, $cheeks 30%, transparent 30%);
     background-position: 0 0;
     background-size: 50% 100%;
     background-repeat: repeat-x;
