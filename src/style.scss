@@ -1492,6 +1492,16 @@ $bleak-offset: 10%;
   height: $icon-dimensions;
 }
 
+.cake-icon__cake {
+  position: relative;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: 90%;
+}
+
 .cake-icon__plate {
   position: relative;
   
