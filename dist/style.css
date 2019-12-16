@@ -891,8 +891,9 @@ body a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-shrink: 0;
   width: 85%;
-  height: 52%;
+  height: 55%;
   z-index: 5;
 }
 
@@ -956,8 +957,9 @@ body a {
   width: 100%;
   height: 30%;
   background-color: #07a88c;
-  border-radius: 25% 25% 50% 50% / 50% 50% 50% 50%;
+  border-radius: 10% 10% 25% 25% / 55% 55% 65% 65%;
   overflow: hidden;
+  z-index: 3;
 }
 .face-icon__hat-bottom:before {
   position: absolute;
@@ -968,6 +970,33 @@ body a {
   height: 100%;
   content: '';
   background-color: #00b494;
+  border-radius: inherit;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.face-icon__face {
+  position: relative;
+  top: -3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 70%;
+  height: 45%;
+  background-color: #ecd1b8;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+}
+.face-icon__face:before {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  display: block;
+  width: calc(100% - 10%);
+  height: 100%;
+  content: '';
+  background-color: #ffe2c5;
   border-radius: inherit;
   overflow: hidden;
   z-index: 1;
