@@ -63,7 +63,7 @@ body a {
   display: grid;
   justify-content: center;
   grid-gap: 65px;
-  grid-template-columns: repeat(3, 150px);
+  grid-template-columns: repeat(4, 150px);
 }
 
 .gift-icon {
@@ -1089,14 +1089,59 @@ body a {
 }
 
 .cake-icon__cake-top {
-  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 35%;
+  width: 35%;
+}
+
+.cake-icon__cake-berry {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin-bottom: -40%;
+  transform: rotate(58deg);
+  background-color: #ed5d51;
+  border-radius: 0% 100% 0% 100% / 0% 100% 0% 100%;
+  z-index: 1;
+}
+
+.cake-icon__cake-cream {
+  position: relative;
+  width: 80%;
+  height: 40%;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  background-color: #dfe0e0;
+  z-index: 3;
+}
+.cake-icon__cake-cream:before, .cake-icon__cake-cream:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: inherit;
+  border-radius: inherit;
+  overflow: hidden;
+  z-index: 1;
+}
+.cake-icon__cake-cream:before {
+  transform: translateX(-45%);
+}
+.cake-icon__cake-cream:after {
+  transform: translateX(45%);
 }
 
 .cake-icon__cake-body {
   position: relative;
   width: 100%;
-  height: 75%;
+  height: 65%;
   background-color: #dfe0e0;
+  border-radius: 25% 25% 0 0;
   overflow: hidden;
 }
 .cake-icon__cake-body:before {
@@ -1120,12 +1165,51 @@ body a {
   width: 100%;
   height: 100%;
   content: '';
-  background-image: linear-gradient(to bottom, transparent 25%, #f47973 0, #f47973 45%, transparent 45%), linear-gradient(to right, transparent 10%, #ed5d51 0, #ed5d51 80%, transparent 80%), linear-gradient(to top, #f47973 15%, transparent 15%);
+  background-image: linear-gradient(to bottom, transparent 25%, #f47973 0, #f47973 48%, transparent 48%), linear-gradient(to right, transparent 10%, #ed5d51 0, #ed5d51 80%, transparent 80%), linear-gradient(to top, #f47973 15%, transparent 15%);
   background-size: 100% 100%, 35% 12%, 100% 100%;
-  background-position: 0 0, 0% 67%, 0 100%;
+  background-position: 0 0, -1% 68%, 0 100%;
   background-repeat: no-repeat, repeat-x, no-repeat;
   border-radius: inherit;
   z-index: 2;
+}
+
+.cake-icon__cake-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 25%;
+  background-color: #dfe0e0;
+  border-radius: 30% 30% 0 0 / 80% 80% 0 0;
+  z-index: 5;
+}
+.cake-icon__cake-decoration:before {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: #f1f2f2;
+  border-radius: inherit;
+  overflow: hidden;
+  z-index: 1;
+}
+.cake-icon__cake-decoration:after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-image: radial-gradient(circle at center, #dfe0e0 50%, transparent 50%), radial-gradient(circle at center, #f1f2f2 50%, transparent 50%), radial-gradient(circle at center, #f1f2f2 50%, transparent 50%);
+  background-size: 33% 100%, 30% 100%, 30% 100%;
+  background-repeat: no-repeat, repeat-x, repeat-x;
+  background-position: -20% 0, -107% 0, 0 0;
+  z-index: 3;
 }
 
 .cake-icon__plate {
