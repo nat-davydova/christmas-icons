@@ -1,4 +1,7 @@
 # Christmas Icons Set
- _A Pen created at CodePen.io. Original URL: [https://codepen.io/nat-davydova/pen/65cc32e9cc40bb85392833760a7d5341](https://codepen.io/nat-davydova/pen/65cc32e9cc40bb85392833760a7d5341).
 
+[Check the Demo](https://codepen.io/nat-davydova/pen/LYENEyL)
+
+- 8 cute HTML/CSS Christmas icons
+- each icon is fully scalable (you could change its size and there would not be issues)
  
