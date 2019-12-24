@@ -100,8 +100,9 @@ $icon-dimensions: 150px;
 
 .content__inner {
   display: grid;
+  justify-content: center;
   grid-gap: 65px;
-  grid-template-columns: repeat(5, $icon-dimensions);
+  grid-template-columns: repeat(3, $icon-dimensions);
 }
 
 //GIFT ICON STYLES
@@ -1479,6 +1480,10 @@ $bleak-offset: 10%;
 //CAKE ICON STYLES
 $plate: #07a88c;
 $plate-bleak: #00b494;
+$cake-basic: #dfe0e0;
+$cake-light: #f1f2f2;
+$cake-accent: #ed5d51;
+$cake-accent-light: #f47973;
 
 $bleak-offset: 10%;
 
@@ -1498,8 +1503,61 @@ $bleak-offset: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 75%;
   height: 90%;
+}
+
+.cake-icon__cake-top {
+  height: 25%;
+}
+
+.cake-icon__cake-body {
+  position: relative;
+  
+  width: 100%;
+  height: 75%;
+  
+  background-color: $cake-basic;
+  overflow: hidden;
+  
+  //bleak
+  &:before {
+    @include position-absolute($top: 0, $left: $bleak-offset);
+  
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    content: '';
+  
+    background-color: $cake-light;
+    border-radius: inherit;
+  
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  //body gradient - cake layers
+  &:after {
+    @include position-absolute($top: 0, $left: 0);
+  
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    content: '';
+  
+    background-image: 
+      linear-gradient(to bottom, transparent 25%, $cake-accent-light 0, $cake-accent-light 45%, transparent 45%),
+      linear-gradient(to right, transparent 10%, $cake-accent 0, $cake-accent 80%, transparent 80%),
+      linear-gradient(to top, $cake-accent-light 15%, transparent 15%);
+    background-size: 100% 100%, 35% 12%, 100% 100%;
+    background-position: 0 0, 0% 67%, 0 100%;
+    background-repeat: no-repeat, repeat-x, no-repeat;
+    border-radius: inherit;
+  
+    z-index: 2;
+  }
 }
 
 .cake-icon__plate {
@@ -1510,6 +1568,8 @@ $bleak-offset: 10%;
   
   border-radius: 100px;
   background-color: $plate;
+  
+  overflow: hidden;
   
    //bleak
   &:before {
@@ -1523,8 +1583,7 @@ $bleak-offset: 10%;
   
     background-color: $plate-bleak;
     border-radius: inherit;
-  
-    overflow: hidden;
+
     z-index: 1;
   }
 }
